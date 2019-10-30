@@ -1,0 +1,6 @@
+<ul>
+  <li> Total Rides in <%= month %> : <%= batch.messages.count.to_s %></li>
+  <li> Total amount spent: Rs.<%= total_amount.to_s %></li>
+</ul>
+
+<%= link_to "Back to Home", controller: 'uber', action: 'form' %>
