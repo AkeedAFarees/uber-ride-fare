@@ -1,4 +1,32 @@
-<div>
-  Total Rides <%= month.present? ? 'in ' + month + ':' : ':'%> <%= batch.messages.count.to_s %> <br>
-  Total amount spent: Rs.<%= total_amount.to_s %>
+<div class="amounts-content amounts-text">
+  <span class="flex">
+    <div class="label">
+      Total Rides <%= month.present? ? "in #{month}: " : ": " %>
+    </div>
+    <div class="value">
+    <%= "  " + batch.messages.count.to_s %> <br>
+    </div>
+  </span>
+
+  <span class="flex">
+    <div class="label">
+      <%= "Total amount spent: " %>
+    </div>
+
+    <div class="value">
+      <%= " Rs." + total_amount.to_s %>
+    </div>
+  </span>
+
+  <% if month.present? %>
+    <span class="flex">
+      <div class="label">
+        <%= "Remaining: " %>
+      </div>
+
+      <div class="value">
+        <%= " Rs." + (6000-total_amount).to_s %>
+      </div>
+    </span>
+  <% end %>
 </div>

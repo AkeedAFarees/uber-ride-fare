@@ -108,13 +108,38 @@ body {
     margin-bottom: 40px;
   }
 
-  .amounts-content {
-    background-color: black;
-    width: 50vh;
-    display: inline;
-  }
-
   .vertical-center {
     vertical-align: center;
+  }
+
+  .content {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+  }
+
+  .amounts-content {
+    //display: inline;
+    margin: auto;
+    width: 67%;
+    border: 3px solid #B0BAAA;
+    padding: 20px;
+    min-width: 400px;
+
+    .flex {
+      display: flex;
+    }
+  }
+
+  .amounts-text {
+    font-size: 18px;
+
+    .label {
+      font-weight: bold;
+    }
+
+    .value {
+      font-style: italic;
+    }
   }
 }
