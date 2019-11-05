@@ -1,7 +1,7 @@
 require 'pp'
 require 'google/apis/gmail_v1'
 
-namespace :uber do
+namespace :ubers do
 
   task :label => :environment do
     client = Google::Apis::GmailV1::GmailService.new
@@ -26,7 +26,7 @@ namespace :uber do
     @total_amount = 0
     @month = Date.today.strftime("%B").to_s
 
-    batch = client.list_user_messages('me', q: "from:Uber Receipts <uber.pakistan@uber.com>")
+    batch = client.list_user_messages('me', q: "from:Uber Receipts <ubers.pakistan@ubers.com>")
     batch.messages.each do |email|
       message = client.get_user_message('me', email.id)
       @total_amount += message.snippet.split[1].tr('Rs','').to_i

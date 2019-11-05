@@ -1,10 +1,10 @@
-class UberController < ApplicationController
+class UbersController < ApplicationController
   before_action :set_client
   before_action :set_month
   before_action :set_total_amount
 
   def form
-
+    @month = Time.current.strftime("%B")
   end
 
   def get_by_label

@@ -13,7 +13,8 @@ gem 'figaro'
 
 gem 'google-api-client', :require => 'google/apis/gmail_v1'
 
-gem 'therubyracer'
+# gem 'therubyracer'
+gem 'mini_racer'
 
 gem 'listen', '>= 3.0.5', '< 3.2'
 gem 'byebug'
@@ -21,6 +22,11 @@ gem 'pry'
 gem 'pry-rails'
 
 gem 'turbolinks'
+
+gem 'sass-rails'
+
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
 
 group :development do
   gem 'sqlite3'    #gem to use in development environment

@@ -1,0 +1,32 @@
+
+<div class="title text-center m-b-10">
+  <%= "Uber Ride Fare Calculation App" %>
+</div>
+<div class="subtitle text-center m-b-10">
+  <%= "Choose your preferred method" %>
+</div>
+
+<br><br>
+<div class="content text-center">
+  <div class="inline-buttons">
+    <%= link_to "Total Amount", get_total_amount_ubers_path,
+                remote: true,
+                class: "button form-button bg-info text-center",
+                id: "load",
+                data: { disable_with: raw(" <i class='fa fa-2x fa-spinner fa-spin vertical-center'></i> Calculating...") }
+    %>
+
+    <%= link_to "Amount for " + @month, get_amount_current_month_ubers_path,
+                remote: true,
+                class: "button form-button bg-info text-center",
+                id: "load",
+                data: { disable_with: raw(" <i class='fa fa-2x fa-spinner fa-spin vertical-center'></i> Calculating...") }
+    %>
+  </div>
+
+  <div class="text-centre">
+    <div class="amounts-content">
+
+    </div>
+  </div>
+</div>

@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GmailAlerts</title>
+    <title>Uber-Fare</title>
+    <%= favicon_link_tag asset_path('uber-fare-favicon.png') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
     <%= render 'layouts/navbar' %>
+<!--    <div class="img-wrapper">-->
+<!--      <div class="img-overlay"></div>-->
+<!--      <img src="assets/uber-background.jpg">-->
+<!--    </div>-->
     <%= yield %>
   </body>
 </html>
