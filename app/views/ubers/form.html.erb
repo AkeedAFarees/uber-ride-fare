@@ -7,7 +7,8 @@
 </div>
 
 <br><br>
-<div class="content text-center">
+<div class="corporate text-center">
+  <h3 class="category"> Corporate </h3>
   <div class="inline-buttons">
     <%= link_to "Total Amount", get_total_amount_ubers_path,
                 remote: true,
@@ -22,9 +23,47 @@
                 id: "load",
                 data: { disable_with: raw(" <i class='fa fa-2x fa-spinner fa-spin vertical-center'></i> Calculating...") }
     %>
+
+    <%= link_to "Amount for " + @previous, get_amount_previous_month_ubers_path,
+                remote: true,
+                class: "button form-button bg-info text-center",
+                id: "load",
+                data: { disable_with: raw(" <i class='fa fa-2x fa-spinner fa-spin vertical-center'></i> Calculating...") }
+    %>
   </div>
 
-  <div id="content">
+  <div id="content_corporate">
+
+  </div>
+</div>
+
+<br><br>
+<div class="personal text-center">
+  <h3 class="category"> Personal </h3>
+  <div class="inline-buttons">
+    <%= link_to "Total Amount", get_personal_amount_ubers_path,
+                remote: true,
+                class: "button form-button bg-info text-center",
+                id: "load",
+                data: { disable_with: raw(" <i class='fa fa-2x fa-spinner fa-spin vertical-center'></i> Calculating...") }
+    %>
+
+    <%= link_to "Amount for " + @month, get_personal_amount_current_month_ubers_path,
+                remote: true,
+                class: "button form-button bg-info text-center",
+                id: "load",
+                data: { disable_with: raw(" <i class='fa fa-2x fa-spinner fa-spin vertical-center'></i> Calculating...") }
+    %>
+
+    <%= link_to "Amount for " + @previous, get_personal_amount_previous_month_ubers_path,
+                remote: true,
+                class: "button form-button bg-info text-center",
+                id: "load",
+                data: { disable_with: raw(" <i class='fa fa-2x fa-spinner fa-spin vertical-center'></i> Calculating...") }
+    %>
+  </div>
+
+  <div id="content_personal">
 
   </div>
 </div>

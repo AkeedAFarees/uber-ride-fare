@@ -1,7 +1,7 @@
 <div class="amounts-content amounts-text">
   <span class="flex">
     <div class="label">
-      Total Rides <%= month.present? ? "in #{month}: " : ": " %>
+      Total rides <%= month.present? ? "in #{month}: " : ": " %>
     </div>
     <div class="value">
     <%= "  " + batch.messages.count.to_s %> <br>
@@ -18,7 +18,7 @@
     </div>
   </span>
 
-  <% if month.present? %>
+  <% if type == 'corporate' and month.present? %>
     <span class="flex">
       <div class="label">
         <%= "Remaining: " %>

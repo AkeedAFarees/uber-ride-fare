@@ -1,1 +1,6 @@
-$("#content").html("<%= escape_javascript(render "get_amount", month: @month, batch: @batch, total_amount: @total_amount) %>")
+<% if @success %>
+  $("#content_corporate").html("<%= escape_javascript(render "get_amount",
+  month: @month, batch: @batch, total_amount: @total_amount, type: 'corporate' ) %>")
+<% else %>
+  $("#content_corporate").html("<%= escape_javascript(render "shared/no_record_found") %>")
+<% end %>

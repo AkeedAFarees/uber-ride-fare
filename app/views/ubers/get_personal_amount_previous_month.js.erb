@@ -1,0 +1,6 @@
+<% if @success %>
+  $("#content_personal").html("<%= escape_javascript(render "get_amount",
+  month: @previous, batch: @batch, total_amount: @total_amount, type: 'personal') %>")
+<% else %>
+  $("#content_personal").html("<%= escape_javascript(render "shared/no_record_found") %>")
+<% end %>
