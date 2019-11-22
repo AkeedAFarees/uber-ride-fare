@@ -51,8 +51,10 @@ class UbersController < ApplicationController
 
   def get_amount_previous_month
     @previous_month = 1.month.ago.year.to_s + "/" + 1.month.ago.month.to_s + "/01"
-    query = "from:Uber Receipts <uber.pakistan@uber.com>, subject: !Personal, after: " + @previous_month
+    @current_month = Time.current.year.to_s + "/" + Time.current.month.to_s + "/01"
+    query = "from:Uber Receipts <uber.pakistan@uber.com>, subject: !Personal, after: " + @previous_month + ", before: " + @current_month
     get_mails(query)
+
   end
 
   private
