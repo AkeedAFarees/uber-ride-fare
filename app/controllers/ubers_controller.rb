@@ -80,7 +80,7 @@ class UbersController < ApplicationController
     if @success
       @batch.messages.each do |email|
         message = @client.get_user_message('me', email.id)
-        @total_amount += message.snippet.split[1].tr('Rs', '').to_i
+        @total_amount += message.snippet.split[1].include?('PKR') ? message.snippet.split[1].tr('PKR', '').to_i : message.snippet.split[1].tr('Rs', '').to_i
       end
     end
   end
