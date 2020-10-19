@@ -5,6 +5,8 @@
   <% end %>
   </div>
   <div class="logout-btn">
-    <%= link_to "Sign Out", logout_path, method: :delete, class: "button bg-danger" %>
+    <% if @current_user.present? %>
+      <%= link_to "Sign Out", logout_path, method: :delete, class: "button bg-danger" %>
+    <% end %>
   </div>
 </div>
