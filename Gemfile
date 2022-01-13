@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.0'
 
 gem 'rails', '~> 6.1.4'
-# gem 'sqlite3'
 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
